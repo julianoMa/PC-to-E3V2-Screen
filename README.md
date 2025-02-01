@@ -1,4 +1,4 @@
-# PC to E3V2 Screen
+![image](https://github.com/user-attachments/assets/49b332a5-b32c-489b-a41b-bf3aa0d8c4a6)# PC to E3V2 Screen
 This project is just researching about the Ender 3 V2 Screen, and see if I can use it as a in-case display
 
 > [!NOTE]
@@ -27,3 +27,40 @@ Show at the screenshot below :
 ## TJC Editor
 I found a [Chinese software](http://wiki.tjc1688.com/download/usart_hmi.html) that can be used for modifying screen's firmware. And it works!
 <img alt="Screen successfuly modified" src="https://github.com/user-attachments/assets/6fac98b9-dfc2-42c3-8465-9b8d03c8cf8d">
+
+
+I managed to do something a bit good looking, and displaying static infos using an **Arduino UNO** and some code.
+```C
+#include <SoftwareSerial.h>
+SoftwareSerial tjcSerial(10, 11); // RX, TX
+
+void setup() {
+  Serial.begin(115200);
+  tjcSerial.begin(9600);
+  Serial.println("Starting...");
+}
+
+void loop() {
+  Serial.println("Sending data to TJC...");
+
+  tjcSerial.print("cpuusage.txt=\"11\"");
+  tjcSerial.write(0xFF); tjcSerial.write(0xFF); tjcSerial.write(0xFF);
+
+  tjcSerial.print("cputemp.txt=\"43\"");
+  tjcSerial.write(0xFF); tjcSerial.write(0xFF); tjcSerial.write(0xFF);
+
+  tjcSerial.print("gpuusage.txt=\"4\"");
+  tjcSerial.write(0xFF); tjcSerial.write(0xFF); tjcSerial.write(0xFF);
+
+  tjcSerial.print("gputemp.txt=\"38\"");
+  tjcSerial.write(0xFF); tjcSerial.write(0xFF); tjcSerial.write(0xFF);
+
+  tjcSerial.print("ramusage.txt=\"53\"");
+  tjcSerial.write(0xFF); tjcSerial.write(0xFF); tjcSerial.write(0xFF);
+  delay(2000);
+}
+```
+| | | 
+|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="Screen in editor" src="https://github.com/user-attachments/assets/62f98041-e0d8-485c-9eb3-021df946a68b"> | <img width="1604" alt="Static preview" src="https://github.com/user-attachments/assets/ce1253e9-5804-414e-acef-1d3ef407fb90">
+
