@@ -23,3 +23,7 @@ By disconnecting everything, I have access to the "real" screen, an **"0430A006-
 So, while going into the [Mriscoc Ender 3 V2 screen firmware](https://github.com/mriscoc/Ender3V2S1/), I found out that there's multiple "types" of screens, and mine's a **"TJC display"**
 Show at the screenshot below :
 ![image](https://github.com/user-attachments/assets/53269c4e-a588-4d7c-889e-eedb6d0bc553)
+
+## TJC Editor
+I found a [Chinese software](http://wiki.tjc1688.com/download/usart_hmi.html) that can be used for modifying screen's firmware. And it works!
+<img alt="Screen successfuly modified" src="https://github.com/user-attachments/assets/6fac98b9-dfc2-42c3-8465-9b8d03c8cf8d">
