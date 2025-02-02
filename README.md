@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/49b332a5-b32c-489b-a41b-bf3aa0d8c4a6)# PC to E3V2 Screen
+# PC to E3V2 Screen
 This project is just researching about the Ender 3 V2 Screen, and see if I can use it as a in-case display
 
 > [!NOTE]
