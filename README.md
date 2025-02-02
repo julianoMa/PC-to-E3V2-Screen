@@ -8,6 +8,7 @@ This project can help with using the **TJC screen** from the **Ender 3 V2** 3D p
 * **Arduino** (I'm using the Uno).
 * Jumper **wires**.
 * **Open Hardware Monitor** (download [here](https://openhardwaremonitor.org/downloads/))
+* **Arduino IDE**.
 * **Pyserial** (`pip uninstall serial` and then `pip install pyserial`)
 * (Optionnal) **Usart HMI** (if you want to edit the screen's text position, or the background image. [Here](http://wiki.tjc1688.com/download/usart_hmi.html))
 
